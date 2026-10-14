@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f2e8">
+  <meta name="description" content="Brew & Beyond — coffee, comfort, and a little chaos. Your new favorite neighborhood café.">
+  <title>Brew & Beyond — Sip Outside the Lines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <div class="announcement"><span class="sparkle">✳</span> GOOD COFFEE. QUESTIONABLE SLEEP SCHEDULE. <span class="announcement-right">OPEN DAILY · 8 AM — 10 PM</span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Brew and Beyond home">
+      <span class="brand-mark">B<span>&</span>B</span>
+      <span class="brand-name">brew <i>&</i> beyond<small>COFFEE CLUB</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">The menu</a>
+      <a href="#story">Our vibe</a>
+      <a href="#visit">Find us</a>
+      <button class="cart-button" id="openCart" aria-label="Open shopping cart">Your bag <span class="cart-count" id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR NEW HAPPY PLACE</div>
+        <h1>Life’s too short<br>for <span class="scribble">bad coffee.</span></h1>
+        <p class="hero-description">A little caffeine. A little chaos. A whole lot of good vibes. Your corner of the world to slow down, show up, and sip something seriously good.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Get your fix <span>↗</span></a>
+          <a class="text-link" href="#story">Get to know us <span>↓</span></a>
+        </div>
+        <div class="social-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>J</span><span>A</span><span>M</span><span>+</span></div>
+          <div><div class="stars">★★★★★ <b>4.9/5</b></div><small>Powered by your coffee runs</small></div>
+        </div>
+        <span class="hero-doodle doodle-star">✳</span>
+      </div>
+      <div class="hero-art">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1511920233353-3f6e9a6c9e7f?auto=format&fit=crop&w=1100&q=85" alt="Freshly brewed iced coffee on a café table">
+          <div class="photo-label"><span>MADE WITH</span><strong>main character<br>energy.</strong></div>
+        </div>
+        <div class="sticker sticker-round"><span>GOOD<br>MOOD<br>BREW</span><b>✳</b></div>
+        <div class="sticker sticker-note">sip happens <span>♡</span></div>
+        <div class="hero-art-dot"></div>
+      </div>
+      <div class="hero-bottom-note"><span>SCROLL A LITTLE</span><span class="scroll-line"></span><span>GOOD THINGS AHEAD</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Our café philosophy">
+      <div class="ticker-track"><span>COFFEE FIRST</span><b>✳</b><span>VIBES ALWAYS</span><b>✳</b><span>STAY A LITTLE</span><b>✳</b><span>COFFEE FIRST</span><b>✳</b><span>VIBES ALWAYS</span><b>✳</b><span>STAY A LITTLE</span><b>✳</b></div>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-dot"></span> THE GOOD STUFF</div><h2>Your cravings,<br><span>our calling.</span></h2></div>
+        <p>Handcrafted sips and little bites that make an ordinary day feel like a Friday.</p>
+      </div>
+      <div class="menu-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Filter menu">
+          <button class="filter-tab active" data-filter="all">Everything</button>
+          <button class="filter-tab" data-filter="coffee">Coffee</button>
+          <button class="filter-tab" data-filter="chill">Cold & chill</button>
+          <button class="filter-tab" data-filter="bites">Little bites</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="menuSearch" type="search" placeholder="Find your fave..." aria-label="Search menu"></label>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="coffee" data-name="Cloud Nine Latte">
+          <div class="product-image image-lilac"><span class="product-tag">CROWD FAVE</span><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Latte with creamy milk foam" loading="lazy"><span class="image-number">01</span></div>
+          <div class="product-info"><div><h3>Cloud Nine Latte</h3><p>Espresso, oat milk, vanilla cloud</p></div><strong>₹220</strong></div>
+          <button class="add-button" data-id="cloud-latte" data-name="Cloud Nine Latte" data-price="220" data-emoji="☁️">Add to bag <span>＋</span></button>
+        </article>
+        <article class="product-card" data-category="chill" data-name="Main Character">
+          <div class="product-image image-yellow"><span class="product-tag tag-new">NEW DROP</span><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Iced coffee in a clear glass" loading="lazy"><span class="image-number">02</span></div>
+          <div class="product-info"><div><h3>Main Character</h3><p>Cold brew, caramel, big energy</p></div><strong>₹250</strong></div>
+          <button class="add-button" data-id="main-character" data-name="Main Character" data-price="250" data-emoji="🧋">Add to bag <span>＋</span></button>
+        </article>
+        <article class="product-card" data-category="coffee" data-name="The OG Cappuccino">
+          <div class="product-image image-pink"><span class="product-tag">THE CLASSIC</span><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80" alt="Cappuccino with latte art" loading="lazy"><span class="image-number">03</span></div>
+          <div class="product-info"><div><h3>The OG Cappuccino</h3><p>Bold espresso, silky foam</p></div><strong>₹190</strong></div>
+          <button class="add-button" data-id="og-cappuccino" data-name="The OG Cappuccino" data-price="190" data-emoji="☕">Add to bag <span>＋</span></button>
+        </article>
+        <article class="product-card" data-category="bites" data-name="Choco Chunk Cookie">
+          <div class="product-image image-green"><span class="product-tag">SWEET TOOTH</span><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80" alt="Chocolate chip cookies" loading="lazy"><span class="image-number">04</span></div>
+          <div class="product-info"><div><h3>Choco Chunk Cookie</h3><p>Gooey middle, crispy edges</p></div><strong>₹140</strong></div>
+          <button class="add-button" data-id="cookie" data-name="Choco Chunk Cookie" data-price="140" data-emoji="🍪">Add to bag <span>＋</span></button>
+        </article>
+        <article class="product-card" data-category="chill" data-name="Berry Blush">
+          <div class="product-image image-orange"><span class="product-tag">NO COFFEE? OK.</span><img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=700&q=80" alt="Pink berry iced drink" loading="lazy"><span class="image-number">05</span></div>
+          <div class="product-info"><div><h3>Berry Blush</h3><p>Strawberry, hibiscus, sparkle</p></div><strong>₹210</strong></div>
+          <button class="add-button" data-id="berry-blush" data-name="Berry Blush" data-price="210" data-emoji="🍓">Add to bag <span>＋</span></button>
+        </article>
+        <article class="product-card" data-category="bites" data-name="Avo Toastie">
+          <div class="product-image image-blue"><span class="product-tag">BRUNCH ICON</span><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80" alt="Toast with fresh toppings" loading="lazy"><span class="image-number">06</span></div>
+          <div class="product-info"><div><h3>Avo Toastie</h3><p>Sourdough, smashed avo, chili crunch</p></div><strong>₹280</strong></div>
+          <button class="add-button" data-id="avo-toastie" data-name="Avo Toastie" data-price="280" data-emoji="🥑">Add to bag <span>＋</span></button>
+        </article>
+      </div>
+      <p class="no-results" id="noResults" hidden>No matches yet. Try another craving ✨</p>
+      <div class="menu-bottom"><span>MADE FRESH. NEVER BORING.</span><span>GOOD TASTE IS OUR LOVE LANGUAGE <b>♡</b></span></div>
+    </section>
+
+    <section class="manifesto" id="story">
+      <div class="manifesto-image"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1100&q=85" alt="Warm, welcoming café interior" loading="lazy"><span class="image-caption">YOUR TABLE IS WAITING.</span></div>
+      <div class="manifesto-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> MORE THAN A CAFFEINE FIX</div><h2>Come for the coffee.<br><em>Stay for the plot.</em></h2><p>We’re here for the long chats, the solo dates, the “one more episode” work sessions, and the tiny wins worth celebrating. No dress code. No weird rules. Just really good coffee and room to be you.</p><a href="#visit" class="button button-light">Come hang with us <span>↗</span></a><span class="manifesto-doodle">✳</span></div>
+    </section>
+
+    <section class="perks section-wrap">
+      <div class="perk"><span class="perk-icon">☕</span><h3>Good beans only</h3><p>Thoughtfully sourced. Lovingly brewed. Always worth the sip.</p></div>
+      <div class="perk"><span class="perk-icon">♡</span><h3>Zero judgement zone</h3><p>Decaf, extra shot, oat milk — your cup, your rules.</p></div>
+      <div class="perk"><span class="perk-icon">✳</span><h3>Stay a little longer</h3><p>Wi-Fi, cozy corners, and no side-eye for the laptop crowd.</p></div>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div class="visit-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> LET'S MAKE IT A DATE</div><h2>Your usual spot<br>is <span>calling.</span></h2><p>Drop by for a quick pick-me-up or make an afternoon of it. We’ll save you a good seat.</p><div class="visit-details"><div><span class="detail-icon">⌖</span><p><b>Find our little corner</b><br>12, Good Vibes Lane, Indore</p></div><div><span class="detail-icon">◷</span><p><b>We're up early-ish</b><br>Every day · 8:00 AM – 10:00 PM</p></div></div></div>
+      <form class="reservation-card" id="reservationForm">
+        <div class="reservation-top"><span>PLAN YOUR VISIT</span><span class="reservation-star">✳</span></div>
+        <h3>Save yourself a seat.</h3><p>For your coffee date, catch-up, or main character moment.</p>
+        <label>Your name<input type="text" name="name" placeholder="What do we call you?" required minlength="2"></label>
+        <div class="form-row"><label>Date<input type="date" name="date" id="reservationDate" required></label><label>People<select name="people" required><option value="1">Just me</option><option value="2" selected>2 people</option><option value="3">3 people</option><option value="4">4 people</option><option value="5+">5+ people</option></select></label></div>
+        <label>Time<select name="time" required><option value="">Pick a time</option><option>9:00 AM</option><option>11:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option><option>7:00 PM</option><option>9:00 PM</option></select></label>
+        <button class="button button-dark reservation-submit" type="submit">Request a table <span>↗</span></button>
+        <small class="form-note">Demo form — no real booking is sent.</small>
+      </form>
+    </section>
+
+    <section class="newsletter section-wrap">
+      <div><div class="eyebrow"><span class="eyebrow-dot"></span> GOOD THINGS IN YOUR INBOX</div><h2>Spill the <span>beans.</span></h2><p>New drops, secret menu things, and the occasional love note. No spam, promise.</p></div>
+      <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="emailInput">Your email address</label><input id="emailInput" type="email" placeholder="you@somewhere.com" required><button type="submit" aria-label="Subscribe">I'm in <span>↗</span></button></form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">B<span>&</span>B</span><span class="brand-name">brew <i>&</i> beyond<small>COFFEE CLUB</small></span></a><span class="footer-note">MADE WITH CAFFEINE & A LITTLE CHAOS.</span><div class="footer-links"><a href="#menu">Menu</a><a href="#story">Our vibe</a><a href="#visit">Visit</a><a href="#home">Back to top ↑</a></div><div class="copyright">© <span id="year"></span> BREW & BEYOND. ALL GOOD THINGS RESERVED.</div></footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head"><div><span class="eyebrow">YOUR LITTLE HAUL</span><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span>🛍️</span><h3>It's looking a little empty.</h3><p>Your next fave is just a sip away.</p><button class="button button-dark" id="browseMenu">Browse the menu ↗</button></div></div>
+    <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><p>Taxes and pickup details at checkout.</p><button class="button button-dark checkout-button" id="checkoutButton">Let's make it happen <span>↗</span></button><small>Demo cart — checkout is not connected.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="success-modal"><button class="icon-button modal-close" id="closeModal" aria-label="Close message">×</button><span class="success-icon" id="modalIcon">✳</span><h2 id="modalTitle">You're on the list!</h2><p id="modalMessage">Good things are brewing.</p><button class="button button-dark" id="modalOkay">Cute, thanks! <span>♡</span></button></div>
+  </div>
+</body>
+</html>
